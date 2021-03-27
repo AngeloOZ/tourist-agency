@@ -39,6 +39,29 @@ h1.title_special{
 img{
   max-width: 100%;
 }
+.subtitle{
+  text-align: center;
+  font-size: 40px;
+  font-family: var(--font-montserrat);
+  font-weight: bold;
+}
+.subtitle strong{
+  color: var(--bg-salmon);
+}
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  color: var(--bg-salmon);
+  border: var(--bg-salmon) 1px solid;
+  padding: 10px 20px;
+  transition: .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.btn:hover{
+  background-color: var(--bg-salmon);
+  color: #fff;
+  transition: .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
 
 /* Estilos menu contactos */
 .header{
@@ -165,7 +188,7 @@ img{
   /*? sin alto definido */
   
   /*! primera opcion */
-  height: calc(100vh - 120px);
+  /* height: calc(100vh - 120px); */
   
   /*! segunda opcion */
   height: calc(100vh - 80px);
@@ -262,22 +285,16 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.about_me_title{
-  font-family: var(--font-montserrat);
-  font-weight: bold;
   color: var(--color-black);
 }
-.about_me_title span{
-  color: var(--bg-salmon);
+.about_me_contenedor{
+  width: 360px;
 }
 .about_me_description{
   padding: 10px;
   font-family: var(--font-poppins);
   font-weight: 400;
   font-size: 16px;
-  color: var(--color-black);
-  width: 360px;
 }
 .about_me_image{
   position: relative;
@@ -296,7 +313,7 @@ img{
 .about_me_image .rectangulo{
   position: absolute;
   bottom: 0;
-  /* right: 0; */
+  right: 0;
   width: 163px;
   height: 63px;
   z-index: 200;
@@ -328,3 +345,112 @@ img{
   background-color: var(--bg-negro-2F);
   z-index: -1;
 }
+/* Estilos tipos de turismo */
+.tourist_type{
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: var(--color-black);
+}
+.tourist_type_title{
+  flex: 100%;
+}
+.tourist_type .tourist_type_card{
+  width: 290px;
+  height: 300px;
+  max-height: 350px;
+  flex-basis: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.card_icono{
+  width: 100px;
+  height: 100px;
+  background-color: var(--bg-blanco-f3);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tourist_type_card:nth-child(even) .card_icono{
+  order: 3;
+}
+.card_icono img{
+  height: 53px;
+  width: 53px;
+}
+.card_titulo{
+  text-transform: uppercase;
+  font-family: var(--font-questrial);
+  font-size: 24px;
+}
+.card_description{
+  width: 270px;
+  text-align: center;
+  font-family: var(--font-poppins);
+  font-size: 16px;
+}
+.card_description::first-letter{
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Estilos de Galeria                             */
+/* -------------------------------------------------------------------------- */
+.galeria{
+  /* margin-top: 100px; */
+  width: 100%;
+}
+.galeria .galeria_top,
+.galeria .galeria_bottom{
+  width: 100%;
+  height: 225px;
+  display: grid;
+  grid-template-columns: 28% auto 28%;
+  overflow: hidden;
+}
+.galeria_top .box_galery img,
+.galeria_bottom .box_galery img{
+  width: 100%;
+  object-fit: cover;
+}
+.box_galery{
+  transition: 0.3s ease-in filter;
+}
+.galeria .galeria_top:hover .box_galery,
+.galeria .galeria_bottom:hover .box_galery{
+  filter: brightness(0.5);
+}
+.galeria .galeria_top .box_galery:hover,
+.galeria .galeria_bottom .box_galery:hover{
+  transition: 0.3s ease-in;
+  filter: brightness(1);
+}
+
+.galeria .galeria_bottom{
+  grid-template-columns: auto 28% auto;
+}
+.description_galery{
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-black);
+}
+.description_galery .description{
+  max-width: 780px;
+  text-align: center;
+  font-family: var(--font-poppins);
+  font-size: 16px;
+}
+.btn_galery{
+  text-transform: uppercase;
+}
+
+
