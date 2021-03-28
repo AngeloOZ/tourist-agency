@@ -534,3 +534,120 @@ img{
 .card_package_description .precio::before{
   content: '$';
 }
+
+/* -------------------------------------------------------------------------- */
+/*                            estilos testimoniales                           */
+/* -------------------------------------------------------------------------- */
+.testimonales{
+  padding-top: 50px;
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenedor_testimoniales{
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+.contenedor_testimoniales .sub_cont_test{
+  width: 100%;
+  display: grid;
+  transition: 0.3s ease transform;
+}
+.sub_cont_test .testimonial{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-black);
+}
+.testimonial_comilla{
+  margin-bottom: 30px;
+}
+.testimonial_text{
+  width: 635px;
+  text-align: center;
+  font-size: 26px;
+  font-family: var(--font-questrial);
+  margin-bottom: 25px;
+}
+.testimonial_autor{
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: var(--font-montserrat);
+  text-align: center;
+  margin-bottom: 5px;
+}
+.testimonial_categoria{
+  text-align: center;
+  font-family: var(--font-questrial);
+  font-size: 16px;
+}
+.testimonales .indicadores{
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.indicadores .indicador{
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 3px solid var(--bg-salmon);
+  cursor: pointer;
+  margin: 0 5px;
+}
+.indicadores .indicador.active{
+  background-color: var(--bg-salmon);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             estilos del footer                             */
+/* -------------------------------------------------------------------------- */
+.footer{
+  width: 100%;
+}
+.footer_image{
+  width: 100%;
+}
+.footer_image img{
+  width: 100%;
+}
+.footer_logo{
+  background: transparent;
+  text-align: center;
+  z-index: 100;
+  margin-top: -190px;
+}
+.nav_footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -20px;
+  min-height: 140px;
+  background: #000;
+}
+.footer_nav_enlaces{
+  display: flex;
+  width: 450px;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.footer_nav_enlaces .enlaces.active{
+  color: var(--bg-salmon);
+}
+.footer_nav_enlaces a{
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+.footer_copyright{
+  margin-top: 15px;
+  color: #fff;
+  font-family: var(--font-questrial);
+  font-size: 16px;
+}
