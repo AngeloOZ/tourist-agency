@@ -30,6 +30,7 @@ html{
 }
 body{
   font-family: var(--font-poppins);
+  /* overflow-x: hidden; */
 }
 
 h1.title_special{
@@ -160,6 +161,7 @@ img{
   z-index: 9999;
 }
 .nav_header_main.sticky{
+  position: sticky;
   top: 0;
   background-color: var(--bg-blanco);
   transition: .5s ease background;
@@ -178,16 +180,62 @@ img{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+  font-weight: bold;
+  text-align: center;
 }
+.nav_enlaces .nav_languages{
+  position: relative;
+  width: 50px;
+  padding-left: 10px;
+}
+.nav_enlaces .nav_languages::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  margin-left: 2px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--bg-blanco);
+}
+.nav_header_main.sticky .nav_languages::before{
+  border-top: 8px solid var(--color-black);
+}
+
+.nav_languages .options_language{
+  display: none;
+  position: absolute;
+  width: 120px;
+  border-radius: 8px;
+  left: 0;
+  list-style: none;
+  background-color: var(--bg-blanco);
+  padding: 5px 0;
+  margin-top: 10px;
+}
+.nav_enlaces:hover .options_language{
+  display: block;
+}
+.options_language .option_lang{
+  display: block;
+  color: var(--color-black);
+  text-decoration: none;
+  padding: 5px 1px;
+  transition: 0.2s ease-in color;
+}
+.options_language .option_lang:hover{
+  color: var(--bg-salmon);
+}
+
 .nav_enlaces .enlaces{
   width: auto;
   padding: 0 7px;
   color: var(--color-white);
   text-decoration: none;
-  font-family: var(--font-montserrat);
-  font-weight: bold;
-  text-align: center;
 }
+.nav_header_main.sticky .nav_languages,
 .nav_header_main.sticky .enlaces{
   color: var(--color-black);
 }
@@ -205,15 +253,8 @@ img{
 {
   position: relative;
   width: 100%;
-  /* !default */
-  /*? sin alto definido */
-  
-  /*! primera opcion */
-  /* height: calc(100vh - 120px); */
-  
-  /*! segunda opcion */
+  /*TODO Verificar alto del video */
   height: calc(100vh - 80px);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -221,7 +262,7 @@ img{
   transition: 0.5s;
 }
 .background_hero::before{
-  content: 'hola';
+  content: '';
   display: block;
   bottom: -1px;
   left: 0;
@@ -599,7 +640,7 @@ img{
   border-radius: 50%;
   border: 3px solid var(--bg-salmon);
   cursor: pointer;
-  margin: 0 5px;
+  margin: 0 8px;
 }
 .indicadores .indicador.active{
   background-color: var(--bg-salmon);
