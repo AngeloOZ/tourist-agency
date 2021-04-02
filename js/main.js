@@ -1,3 +1,4 @@
+// alert(`h: ${window.innerHeight}px - w:${window.innerWidth}px`)
 const navMain = document.getElementById('nav_header_main');
 const btnDark = document.getElementById('btn_dark_mode');
 const btnHamburger  = document.getElementById('btn_hamburger');
@@ -75,25 +76,23 @@ function initCarouselTestimonial(){
 
 
 function loadDarkMode(){
-	const stateDarkMode = localStorage.getItem("darkMode");
-	if(stateDarkMode){
-		if(stateDarkMode == "true"){
-			document.documentElement.style.setProperty('--bg-blanco','#1A1A1A')
-			document.documentElement.style.setProperty('--bg-blanco-f3','#313131')
-			document.documentElement.style.setProperty('--color-black','#fff')
-			document.documentElement.style.setProperty('--color-white','#000')
-			const img = document.querySelector('#nav_header_main .logo img');
-			img.src = "../image/logo_main_white.png";
-		}else{
-			document.documentElement.style.setProperty('--bg-blanco','#ffffff')
-			document.documentElement.style.setProperty('--bg-blanco-f3','#F3F3F3')
-			document.documentElement.style.setProperty('--color-black','#000')
-			document.documentElement.style.setProperty('--color-white','#fff')
-			const img = document.querySelector('#nav_header_main .logo img');
-			img.src = "../image/logo_main_black.png";
-		}	
+	const stateDarkMode = (localStorage.getItem("darkMode")) ? 
+		localStorage.getItem("darkMode"): "false";
+		
+	if(stateDarkMode == "true"){
+		btnDark.classList.add('active_dark');
+		document.documentElement.style.setProperty('--bg-blanco','#1A1A1A')
+		document.documentElement.style.setProperty('--bg-blanco-f3','#313131')
+		document.documentElement.style.setProperty('--color-black','#fff')
+		document.documentElement.style.setProperty('--color-white','#000')
+		const img = document.querySelector('#nav_header_main .logo img');
+		img.src = "../image/logo_main_white.png";
 	}else{
-		localStorage.setItem("darkMode",false)
-		console.log("creado");
-	}
+		document.documentElement.style.setProperty('--bg-blanco','#ffffff')
+		document.documentElement.style.setProperty('--bg-blanco-f3','#F3F3F3')
+		document.documentElement.style.setProperty('--color-black','#000')
+		document.documentElement.style.setProperty('--color-white','#fff')
+		const img = document.querySelector('#nav_header_main .logo img');
+		img.src = "../image/logo_main_black.png";
+	}	
 }

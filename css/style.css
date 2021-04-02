@@ -971,12 +971,33 @@ img{
   .estadistic .estadistic_text strong{
     font-size: 18px;
   }
+  .nav_enlaces .enlaces{
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px; 
+  }
+  .nav_enlaces .enlaces:hover{
+    border-radius: 0;
+    height: 60px;
+    line-height: 60px;
+    color: var(--color-static-white);
+  }
+  .nav_enlaces .languages{
+    font-size: 18px;
+  }
   .description_galery{
     padding: 10px;
     height: auto;
   }
+  .footer_nav_enlaces{
+    width: 100%;
+  }
 }
 @media screen and (max-width: 380px){
+  .nav_contact_social-media{
+    width: 100%;
+    padding: 0 5px;
+  }
   .text h1{
     font-size: 65px;
   }
@@ -990,5 +1011,15 @@ img{
   }
   .estadistic .estadistic_text strong{
     font-size: 14px;
+  }
+  .footer_logo{
+    display: none;
+  }
+  .about_me_image::before{
+    display: none;
+  } 
+  .description_galery{
+    padding: 20px 10px;
+    height: auto;
   }
 }
