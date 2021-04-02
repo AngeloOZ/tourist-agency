@@ -2,7 +2,7 @@ const navMain = document.getElementById('nav_header_main');
 const btnDark = document.getElementById('btn_dark_mode');
 const btnHamburger  = document.getElementById('btn_hamburger');
 
-// loadDarkMode();
+loadDarkMode();
 initEvents();
 
 function initEvents(){
@@ -24,20 +24,16 @@ function initEvents(){
 		}else{
 			localStorage.setItem('darkMode',false)
 		}
-		// loadDarkMode();
+		loadDarkMode();
 	})
 	window.addEventListener('scroll',e =>{
 		const scrollY = window.scrollY;
-		if(!btnHamburger.classList.contains('active')){
-			if(scrollY <= 75){
-				navMain.style.top = `${75 - scrollY}px`;
-				navMain.classList.remove('sticky');
-			}else{
-				navMain.style.top = `0`;
-				navMain.classList.add('sticky');
-			}
+		if(scrollY <= 75){
+			navMain.style.top = `${75 - scrollY}px`;
+			navMain.classList.remove('sticky');
 		}else{
-			window.scrollTo(0, scrollY);
+			navMain.style.top = `0`;
+			navMain.classList.add('sticky');
 		}
 	});
 	
@@ -53,7 +49,6 @@ function initCarouselTestimonial(){
 	const contIndicadores = document.getElementById('indicadores_test');
 	if(testCont){
 		const numTestimoniales = testCont.childElementCount;
-		testCont.style.gridTemplateColumns = `repeat(${numTestimoniales},100%)`
 		const fragment = document.createDocumentFragment();
 		for (let i = 0; i < numTestimoniales; i++) {
 			const span = document.createElement('SPAN');
@@ -91,11 +86,11 @@ function loadDarkMode(){
 			img.src = "../image/logo_main_white.png";
 		}else{
 			document.documentElement.style.setProperty('--bg-blanco','#ffffff')
-			document.documentElement.style.setProperty('--bg-blanco-f3','#313131')
-			document.documentElement.style.setProperty('--color-black','#fff')
-			document.documentElement.style.setProperty('--color-white','#000')
+			document.documentElement.style.setProperty('--bg-blanco-f3','#F3F3F3')
+			document.documentElement.style.setProperty('--color-black','#000')
+			document.documentElement.style.setProperty('--color-white','#fff')
 			const img = document.querySelector('#nav_header_main .logo img');
-			img.src = "../image/logo_main_white.png";
+			img.src = "../image/logo_main_black.png";
 		}	
 	}else{
 		localStorage.setItem("darkMode",false)
