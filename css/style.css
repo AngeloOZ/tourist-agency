@@ -195,15 +195,15 @@ img{
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
-  transition: .5s ease background;
   z-index: 9999;
+  transition: 200ms ease background;
 }
 .nav_header_main.sticky{
   position: sticky;
   top: 0;
   background: var(--bg-blanco);
-  transition: .5s ease background;
   box-shadow: 0 5px 10px rgba(0, 0, 0,0.6);
+  transition: 200ms ease background;
 }
 .nav_header_main .logo{
   width: 340px;
@@ -633,6 +633,15 @@ img{
 .card_package_description .precio::before{
   content: '$';
 }
+.cont_btn_package{
+  flex: 100%;
+  text-align: center;
+}
+.btn_all_package{
+  width: 290px;
+  font-weight: bold;
+  border: 2px solid var(--bg-salmon);
+}
 
 /* -------------------------------------------------------------------------- */
 /*                            estilos testimoniales                           */
@@ -802,6 +811,11 @@ img{
 }
 .btn_hamburger.active .hamburger::after{
   transform: rotate(90deg);
+}
+/* prueba */
+.icono_type{
+  font-size: 54px;
+  color: var(--color-black);
 }
 
 /* Resposive Design */
@@ -981,6 +995,9 @@ img{
     height: 60px;
     line-height: 60px;
     color: var(--color-static-white);
+  }
+  .indicadores .indicador{
+    margin: 0 12px;
   }
   .nav_enlaces .languages{
     font-size: 18px;
