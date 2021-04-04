@@ -1,7 +1,16 @@
+import {LightBox} from './lightbox.js'
 // alert(`h: ${window.innerHeight}px - w:${window.innerWidth}px`)
 const navMain = document.getElementById('nav_header_main');
 const btnDark = document.getElementById('btn_dark_mode');
 const btnHamburger  = document.getElementById('btn_hamburger');
+
+try {
+	const images = document.querySelectorAll('img.lightbox');
+	const light = new LightBox(images);
+	light.init();
+} catch (error) {
+	console.log(error);
+}
 
 loadDarkMode();
 initEvents();
@@ -28,14 +37,8 @@ function initEvents(){
 		loadDarkMode();
 	})
 	window.addEventListener('scroll',e =>{
-		const scrollY = window.scrollY;
-		if(scrollY <= 75){
-			navMain.style.top = `${75 - scrollY}px`;
-			navMain.classList.remove('sticky');
-		}else{
-			navMain.style.top = `0`;
-			navMain.classList.add('sticky');
-		}
+		const ps = navMain.getBoundingClientRect();
+		(ps.y == 0) ? navMain.classList.add('sticky') : navMain.classList.remove('sticky');
 	});
 	
 	document.addEventListener('DOMContentLoaded', _ =>{
