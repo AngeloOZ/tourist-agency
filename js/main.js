@@ -76,7 +76,6 @@ function initCarouselTestimonial(){
 
 }
 
-
 function loadDarkMode(){
 	const stateDarkMode = (localStorage.getItem("darkMode")) ? 
 		localStorage.getItem("darkMode"): "false";
