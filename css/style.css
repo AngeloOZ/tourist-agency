@@ -21,8 +21,7 @@
   --color-static-white: #fff;
 }
 
-*
-{
+*{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -819,8 +818,6 @@ img{
 .btn_hamburger.active .hamb_part_3{
   transform: translateY(-20px) rotate(45deg);
 }
-
-
 .nav_header_main.sticky [class^="hamb_part"]{
   background-color: var(--color-black);
 }
