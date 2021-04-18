@@ -37,7 +37,9 @@ function initEvents(){
 	})
 	window.addEventListener('scroll',e =>{
 		const ps = navMain.getBoundingClientRect();
-		(ps.y == 0) ? navMain.classList.add('sticky') : navMain.classList.remove('sticky');
+		if(navMain.hasAttribute('data-active-sticky')){
+			(ps.y == 0) ? navMain.classList.add('sticky') : navMain.classList.remove('sticky');
+		}
 	});
 	
 	document.addEventListener('DOMContentLoaded', _ =>{

@@ -13,6 +13,20 @@
     align-items: center;
     transition: 0.3s ease all 0.2s;
 }
+.container_lightboox::before{
+    content: '\0002B';
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 9999999999999;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
 .container_lightboox.active_lightbox{
     opacity: 1;
     visibility: visible;
@@ -35,14 +49,10 @@
 .lightbox_image{
     width: 100%;
     max-height: calc(100vh - 140px);
-    overflow: auto;
-
 }
 .image_light{
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;
-    width: 100%;
+    max-width: 800px;
+    max-height: calc(100vh - 200px);
     object-fit: contain;
     image-rendering: pixelated;
     opacity: 0;
@@ -68,7 +78,7 @@
     transform: translateY(0);
 }
 .lightbox{
-    cursor: pointer;
+    cursor: zoom-in;
 }
 @media screen and (max-width: 500px){
     .subcontainer_lightbox{

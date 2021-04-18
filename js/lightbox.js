@@ -31,6 +31,7 @@ export class LightBox{
     initEvents(){
         this.contenedorLightBox.addEventListener('click', e =>{
             if(e.target.id == 'container_lightboox'){
+                document.querySelector('body').classList.remove('no_scroll');
                 this.contenedorLightBox.classList.remove('active_lightbox');
                 setTimeout(() => {
                     this.imagenLightBox.src = "";
@@ -49,6 +50,7 @@ export class LightBox{
         this.imagenLightBox.src = imagen.src;
         this.descripcionLightBox.textContent = text;
         this.contenedorLightBox.classList.add('active_lightbox');
+        document.querySelector('body').classList.add('no_scroll');
     }
 
 }

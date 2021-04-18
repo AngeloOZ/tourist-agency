@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,700;1,300&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Questrial&display=swap');
 @import "lightbox.css";
+@import "tours.css";
 
 :root{
   /* Variables de Fonts */
@@ -10,6 +11,7 @@
 
   /* Variables de Colores background*/
   --bg-salmon: #F8565D;
+  /* --bg-salmon: royalblue; */ 
   --bg-blanco: #ffffff;
   --bg-blanco-f3: #F3F3F3;
   --bg-negro-2F: #2F2F2F;
@@ -203,7 +205,7 @@ img{
 }
 .nav_header_main.sticky{
   background: var(--bg-blanco);
-  box-shadow: 0 5px 10px rgba(0, 0, 0,0.6);
+  box-shadow: 0 5px 5px rgba(0, 0, 0,0.5);
   transition: 200ms ease background;
 }
 .nav_header_main .logo{
@@ -689,6 +691,11 @@ img{
 .testimonial_comilla{
   text-align: center;
   margin-bottom: 30px;
+}
+.testimonial_comilla .quote{
+  fill: var(--bg-salmon);
+  width: 63px;
+  height: 50px;
 }
 .testimonial_text{
   margin: auto;

@@ -1,0 +1,6 @@
+.svg{
+    text-align: center;
+}
+.svg > svg{
+    /* fill: coral */
+}
