@@ -1,4 +1,4 @@
-export class LightBox{
+export default class LightBox{
     arrayImage
     contenedorLightBox
     imagenLightBox
@@ -27,6 +27,7 @@ export class LightBox{
         this.imagenLightBox = contenedorLight.querySelector('.lightbox_image .image_light');
         this.descripcionLightBox = contenedorLight.querySelector('.subcontainer_lightbox .lightbox_caption')
         this.initEvents();
+        this.contenedorLightBox.style.transition = "0.3s ease all 0.2s"
     }
     initEvents(){
         this.contenedorLightBox.addEventListener('click', e =>{
@@ -52,5 +53,4 @@ export class LightBox{
         this.contenedorLightBox.classList.add('active_lightbox');
         document.querySelector('body').classList.add('no_scroll');
     }
-
 }

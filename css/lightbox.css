@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s ease all 0.2s;
+    /* transition: 0.3s ease all 0.2s; */
 }
 .container_lightboox::before{
     content: '\0002B';

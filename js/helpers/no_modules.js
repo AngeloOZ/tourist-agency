@@ -1,0 +1,1 @@
+alert("Tu navegador no soporta algunas funciones, utiliza un navegador más actualizado.\n\nYour browser does not support some functions, use a more updated browser.")

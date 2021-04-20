@@ -1,0 +1,80 @@
+/** Informacion del tour */
+.header_information{
+    height: 560px;
+    position: relative;
+}
+.text_infomation{
+    position: absolute;
+    width: 60%;
+    height: 330px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-static-white);
+    
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 200px 0px 0px 200px;
+    overflow: hidden;
+}
+.text_infomation .titulo{
+    text-align: center;
+    font-size: 44px;
+    font-family: var(--font-montserrat);
+    width: 80%;
+}
+.text_infomation .descripcion{
+    text-align: center;
+   font-size: 18px;
+   font-family: var(--font-poppins);
+   width: 90%;
+   padding: 10px;
+}
+
+/** Informacion de lugares */
+.information_places{
+    max-width: 1100px;
+    margin: 2rem auto;
+    width: 100%;
+}
+.place{
+    background-color: var(--bg-blanco-f3);
+    color: var(--color-black);
+    margin: 1rem 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.place_item_header{
+    background-color: var(--bg-blanco-f3);
+    height: 50px;
+    width: 100%;
+    font-family: var(--font-questrial);
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+.place_item_header.active{
+    color: var(--color-static-white);
+    background-color: var(--bg-salmon);
+}
+.place_item_header::after{
+    content: "\f078";
+    position: absolute;
+    right: 1rem;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top:  20px solid var(--color-static-white);
+}
+.place_item_body{
+    /* max-height: 0; */
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.place_body_content{
+    padding: 1rem;
+    line-height: 1.5rem;
+}

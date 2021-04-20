@@ -1,8 +1,9 @@
-import {LightBox} from './lightbox.js'
-// alert(`h: ${window.innerHeight}px - w:${window.innerWidth}px`)
+import LightBox from './lightbox.js'
+
 const navMain = document.getElementById('nav_header_main');
 const btnDark = document.getElementById('btn_dark_mode');
 const btnHamburger  = document.getElementById('btn_hamburger');
+const placeItemsHeader = document.querySelectorAll(".place_item_header");
 
 try {
 	const images = document.querySelectorAll('img.lightbox');
@@ -43,7 +44,8 @@ function initEvents(){
 	});
 	
 	document.addEventListener('DOMContentLoaded', _ =>{
-		initCarouselTestimonial();	
+		initCarouselTestimonial();
+		initParallax();	
 	})
 
 }
@@ -77,7 +79,6 @@ function initCarouselTestimonial(){
 	}
 
 }
-
 function loadDarkMode(){
 	const stateDarkMode = (localStorage.getItem("darkMode")) ? 
 		localStorage.getItem("darkMode"): "false";
@@ -99,3 +100,38 @@ function loadDarkMode(){
 		img.src = "../image/logo_main_black.png";
 	}	
 }
+function initParallax(){
+    const ctn = document.querySelector('.parallax');
+    if(ctn && ctn.hasAttribute('data-parallax-image')){
+		const url = ctn.dataset.parallaxImage.toString().trim();
+        if(url != ""){
+			ctn.style.backgroundImage =`url(${url})`;
+			ctn.style.backgroundRepeat = "no-repeat";
+			ctn.style.backgroundSize = "cover";
+			ctn.style.backgroundPosition = "center"
+			ctn.style.backgroundAttachment = "fixed";
+		}else{
+			console.error('La url de la imagen no es valida')
+		}
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                     hol                                    */
+/* -------------------------------------------------------------------------- */
+
+placeItemsHeader.forEach(placeItem => {
+  placeItem.addEventListener("click", event => {
+    placeItem.classList.toggle("active");
+    const itemBody = placeItem.nextElementSibling;
+    if(placeItem.classList.contains("active")) {
+      itemBody.style.maxHeight = itemBody.scrollHeight + "px";
+    }
+    else {
+      itemBody.style.maxHeight = 0;
+    }
+    
+  });
+});
