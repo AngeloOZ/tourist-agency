@@ -3,7 +3,6 @@ import LightBox from './lightbox.js'
 const navMain = document.getElementById('nav_header_main');
 const btnDark = document.getElementById('btn_dark_mode');
 const btnHamburger  = document.getElementById('btn_hamburger');
-const placeItemsHeader = document.querySelectorAll(".place_item_header");
 
 try {
 	const images = document.querySelectorAll('img.lightbox');
@@ -46,6 +45,7 @@ function initEvents(){
 	document.addEventListener('DOMContentLoaded', _ =>{
 		initCarouselTestimonial();
 		initParallax();	
+		initCollapsed();
 	})
 
 }
@@ -115,23 +115,34 @@ function initParallax(){
 		}
     }
 }
+function initCollapsed(){
+	const ctnInformationPlaces = document.getElementById('information_places');
+	const placeItemsHeader = document.querySelectorAll(".place_item_header");
+	// --> si ctnInformationPlaces es undefined
+	if(!ctnInformationPlaces){ 
+		return;
+	}
+	const firstElement = placeItemsHeader[0];
+	// Por defecto activamos el primero
+	firstElement.classList.add('active');
+	let itemBody = firstElement.nextElementSibling;
+	itemBody.style.maxHeight = itemBody.scrollHeight+"px"
+	ctnInformationPlaces.addEventListener('click',e =>{
+		if(e.target.parentElement.classList.contains('place_item_header')){
+			const item = e.target.parentElement;
+			itemBody = item.nextElementSibling;
+			if(!item.classList.contains('active')){
+				placeItemsHeader.forEach(placeItem =>{
+					placeItem.classList.remove('active');
+					placeItem.nextElementSibling.style.maxHeight = "0";
+				})
+				item.classList.add('active');
+				itemBody.style.maxHeight = `${itemBody.scrollHeight + 10}px`;
+			}else{
+				item.classList.remove('active');
+				itemBody.style.maxHeight = "0";
+			}
 
-
-
-/* -------------------------------------------------------------------------- */
-/*                                     hol                                    */
-/* -------------------------------------------------------------------------- */
-
-placeItemsHeader.forEach(placeItem => {
-  placeItem.addEventListener("click", event => {
-    placeItem.classList.toggle("active");
-    const itemBody = placeItem.nextElementSibling;
-    if(placeItem.classList.contains("active")) {
-      itemBody.style.maxHeight = itemBody.scrollHeight + "px";
-    }
-    else {
-      itemBody.style.maxHeight = 0;
-    }
-    
-  });
-});
+		}
+	})
+}
