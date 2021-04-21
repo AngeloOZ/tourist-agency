@@ -1,6 +1,49 @@
-.svg{
-    text-align: center;
+
+.section_one{
+    width: 100%;
+    height: 580px;
+    background-color:var(--bg-salmon);
+    display: flex;
+    justify-content: space-evenly;
 }
-.svg > svg{
-    /* fill: coral */
+.section_one .img {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end ;
+    position: relative;
+    z-index: 2;
+}
+.section_one .img>img{
+    max-width: 432px;
+    height: 373px;
+    margin-left: 2em;
+}
+
+.section_one .img::before{
+    /* no olvidarme el content  :( */
+    top: 120px;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 400px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: var(--color-static-white);
+}
+.section_one .inicio{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inicio_tittle{
+    font-family: var(--font-montserrat);
+    font-size: 60px;
+    color: white;
+}
+.inicio_tittle> strong{
+    color:black;
 }
