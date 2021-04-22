@@ -50,7 +50,6 @@ function initEvents(){
 
 }
 
-
 function initCarouselTestimonial(){
 	const testCont = document.getElementById('sub_cont_test');
 	const contIndicadores = document.getElementById('indicadores_test');
