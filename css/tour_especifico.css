@@ -54,19 +54,16 @@ img{
 }
 .place_item_header{
     position: relative;
-    display: block;
     background-color: var(--bg-blanco-f3);
     height: 50px;
     width: 100%;
-    text-decoration: none;
     color: var(--color-black);
-    line-height: 50px;
-}
-.place_item_header > h2{
     font-family: var(--font-questrial);
     text-align: center;
     font-weight: 300;
     font-size: 28px;
+    line-height: 50px;
+    cursor: pointer;
 }
 .place_item_header.active{
     color: var(--color-static-white);
@@ -110,6 +107,7 @@ img{
     max-width: 1000px;
     text-align: justify;
     line-height: 25px;
+    padding: 0 10px;
 }
 .atractivos{
     padding: 30px 0 50px 0;

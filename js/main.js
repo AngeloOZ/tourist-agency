@@ -117,7 +117,6 @@ function initParallax(){
 function initCollapsed(){
 	const ctnInformationPlaces = document.getElementById('information_places');
 	const placeItemsHeader = document.querySelectorAll(".place_item_header");
-	// --> si ctnInformationPlaces es undefined
 	if(!ctnInformationPlaces){ 
 		return;
 	}
@@ -126,9 +125,10 @@ function initCollapsed(){
 	firstElement.classList.add('active');
 	let itemBody = firstElement.nextElementSibling;
 	itemBody.style.maxHeight = itemBody.scrollHeight+"px"
+
 	ctnInformationPlaces.addEventListener('click',e =>{
-		if(e.target.parentElement.classList.contains('place_item_header')){
-			const item = e.target.parentElement;
+		if(e.target.classList.contains('place_item_header')){
+			const item = e.target;
 			itemBody = item.nextElementSibling;
 			if(!item.classList.contains('active')){
 				placeItemsHeader.forEach(placeItem =>{
@@ -141,7 +141,10 @@ function initCollapsed(){
 				item.classList.remove('active');
 				itemBody.style.maxHeight = "0";
 			}
-
+			setTimeout(() => {
+				const height = item.offsetTop - 180;
+				window.scrollTo(0,height);
+			}, 200);
 		}
 	})
 }
