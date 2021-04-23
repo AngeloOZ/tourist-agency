@@ -38,6 +38,8 @@ body{
   font-family: var(--font-poppins);
   background: var(--bg-blanco);
   overflow-x: hidden;
+  /* transicion barra de menù en tours */
+  transition: 0.3s ease transform;
 }
 body.no_scroll{
   overflow: hidden;
