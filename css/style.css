@@ -25,7 +25,7 @@
   --color-white: #fff;
   --color-static-white: #fff;
 }
-
+/* Estilos generales */
 *{
   box-sizing: border-box;
   padding: 0;
@@ -50,6 +50,8 @@ h1.title_special{
 img{
   max-width: 100%;
 }
+/* Helpers */
+
 .subtitle{
   text-align: center;
   font-size: 40px;
@@ -97,6 +99,9 @@ img{
 .icono_type{
   font-size: 54px;
   color: var(--color-black);
+}
+.color_salmon{
+  color: var(--bg-salmon);
 }
 
 /*? Estilos menu contactos */
