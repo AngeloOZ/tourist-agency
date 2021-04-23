@@ -113,3 +113,28 @@
 .trip_card:nth-child(even) a{
     transform: rotateY(180deg);
 }
+.filter-bar{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: -300px;
+    background: royalblue;
+}
+body.active_pushbar{
+    transition: 0.3s ease transform;
+    transform: translateX(-300px);
+    overflow: hidden;
+}
+
+.filter-button{
+    position: fixed;
+    left: 0;
+    top: 300px;
+    border: none;
+    background-color: black;
+    color: blanchedalmond;
+    padding: 10px 20px ;
+    z-index: 200;
+}

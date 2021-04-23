@@ -46,6 +46,7 @@ function initEvents(){
 		initCarouselTestimonial();
 		initParallax();	
 		initCollapsed();
+		filtermove();
 	})
 
 }
@@ -80,6 +81,7 @@ function initCarouselTestimonial(){
 
 }
 function loadDarkMode(){
+	console.log("hola mundo");
 	const stateDarkMode = (localStorage.getItem("darkMode")) ? 
 		localStorage.getItem("darkMode"): "false";
 		
@@ -146,3 +148,18 @@ function initCollapsed(){
 		}
 	})
 }
+
+function filtermove(){
+	let btnfilter = document.getElementById("filter-button");
+	let btnfilterclose = document.getElementById("filter-bar-close");
+	if (!btnfilter){
+		return;
+	}
+	btnfilter.addEventListener("click",()=>{
+		document.querySelector("body").classList.add("active_pushbar");
+	})
+	btnfilterclose.addEventListener("click",()=>{
+		document.querySelector("body").classList.remove("active_pushbar");
+	})
+}
+
