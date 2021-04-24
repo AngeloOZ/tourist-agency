@@ -114,20 +114,15 @@
     transform: rotateY(180deg);
 }
 .filter-bar{
-    position: fixed;
     width: 300px;
     height: 100%;
+    position: fixed;
     top: 0;
-    bottom: 0;
-    right: -300px;
+    right: -100%;
     background: royalblue;
+    z-index: 99900;
+    transition: 1.5s ease-in-out right;
 }
-body.active_pushbar{
-    transition: 0.3s ease transform;
-    transform: translateX(-300px);
-    overflow: hidden;
-}
-
 .filter-button{
     position: fixed;
     left: 0;
@@ -136,10 +131,12 @@ body.active_pushbar{
     background-color: black;
     color: blanchedalmond;
     padding: 10px 20px ;
-    z-index: 200;
+    z-index: 100;
 }
 
-
+.filter-bar.active{
+    right: 0;
+}
 /*
 Query
 @media screen and (max-width: 786px) {}
