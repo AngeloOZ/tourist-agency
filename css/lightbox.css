@@ -51,7 +51,7 @@
     max-height: calc(100vh - 140px);
 }
 .image_light{
-    max-width: 800px;
+    max-width: 1000px;
     max-height: calc(100vh - 200px);
     object-fit: contain;
     image-rendering: pixelated;
@@ -79,6 +79,11 @@
 }
 .lightbox{
     cursor: zoom-in;
+}
+@media screen and (max-width: 800px){
+    .image_light {
+        max-width: 100%;
+    }
 }
 @media screen and (max-width: 500px){
     .subcontainer_lightbox{

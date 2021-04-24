@@ -1,62 +1,69 @@
-img{
+img {
     max-width: 100%;
 }
+
 /** Informacion del tour */
-.header_information{
+.header_information {
     height: 560px;
     position: relative;
 }
-.text_infomation{
+
+.text_infomation {
     position: absolute;
     width: 60%;
     height: 330px;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--color-static-white);
-    
+
     background: rgba(0, 0, 0, 0.45);
     border-radius: 200px 0px 0px 200px;
     overflow: hidden;
 }
-.text_infomation .titulo{
+
+.text_infomation .titulo {
     text-align: center;
     font-size: 44px;
     font-family: var(--font-montserrat);
     width: 80%;
 }
-.text_infomation .descripcion{
+
+.text_infomation .descripcion {
     text-align: center;
-   font-size: 18px;
-   font-family: var(--font-poppins);
-   width: 90%;
-   padding: 10px;
+    font-size: 18px;
+    font-family: var(--font-poppins);
+    width: 90%;
+    padding: 10px;
 }
 
 /** Informacion de lugares */
-.information_places{
+.information_places {
     max-width: 1300px;
     margin: 2rem auto;
     margin-bottom: 0;
     width: 100%;
 }
-.place{
+
+.place {
     max-width: 1200px;
     width: 90%;
     background-color: var(--bg-blanco-f3);
     color: var(--color-black);
     margin: 1rem auto;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
-.place:last-child{
+
+.place:last-child {
     margin-bottom: 0;
 }
-.place_item_header{
+
+.place_item_header {
     position: relative;
     background-color: var(--bg-blanco-f3);
     height: 50px;
@@ -69,89 +76,102 @@ img{
     line-height: 50px;
     cursor: pointer;
 }
-.place_item_header.active{
+
+.place_item_header.active {
     color: var(--color-static-white);
     background-color: var(--bg-salmon);
 }
-.place_item_header::after{
+
+.place_item_header::after {
     content: "";
     position: absolute;
     right: 1rem;
     top: 10px;
-	display: inline-block;
+    display: inline-block;
     background-color: transparent;
-	height: 15px;
-	width:  15px;
+    height: 15px;
+    width: 15px;
     border-style: solid;
-	border-width: 5px 5px 0 0;
-	transform: rotate(135deg);
+    border-width: 5px 5px 0 0;
+    transform: rotate(135deg);
     transition: 0.3s ease transform;
 }
-.place_item_header.active::after{
-	transform: rotate(-45deg);
+
+.place_item_header.active::after {
+    transform: rotate(-45deg);
     top: 20px;
 }
-.place_item_body{
+
+.place_item_body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-.place_description{
+
+.place_description {
     text-align: center;
     margin-bottom: 20px;
 }
-.place_description h3{
+
+.place_description h3 {
     font-family: var(--font-montserrat);
     font-size: 28px;
     margin: 20px 0;
     color: var(--bg-salmon);
 }
-.place_description p{
+
+.place_description p {
     margin: auto;
     max-width: 1000px;
     text-align: justify;
     line-height: 25px;
     padding: 0 10px;
 }
-.atractivos{
+
+.atractivos {
     padding: 30px 0 50px 0;
     text-align: center;
     background-color: var(--bg-blanco-f3);
 }
-.atractivos h3{
+
+.atractivos h3 {
     font-family: var(--font-montserrat);
     font-weight: bold;
     font-size: 28px;
     margin-bottom: 30px;
     color: var(--bg-salmon);
 }
-.subcontenedor_atractivos{
+
+.subcontenedor_atractivos {
     max-width: 1000px;
+    width: 100%;
     margin: auto;
     text-align: center;
-    box-shadow: 0 0 10px 1px rgba(0,0,0,0.25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     background-color: var(--bg-blanco);
 }
-.sub_atractivo{
+
+.sub_atractivo {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     height: 300px;
+    overflow: hidden;
 }
-.sub_atractivo:nth-child(even){
+.sub_atractivo:nth-child(even) {
     flex-direction: row-reverse;
 }
-.atractivos__image{
-    max-width: 500px;
+.atractivos__image {
     height: 100%;
+    max-width: 500px;
     flex: 1 0 50%;
 }
-.atractivos__image img{
+.atractivos__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.atractivos__description{
+.atractivos__description {
     flex: 1 0 50%;
     display: flex;
     flex-direction: column;
@@ -160,58 +180,70 @@ img{
     text-align: left;
     padding: 0 20px;
 }
-.atractivos__description h4{
+
+.atractivos__description h4 {
     text-align: left;
     width: 100%;
 }
-.atractivos__description p{
+
+.atractivos__description p {
     text-align: justify;
 }
 
 /* Mapa */
-.map_ruta{
+.map_ruta {
     max-width: 1366px;
-    min-height: 500px;
 }
-.map_ruta_titulo{
+
+.map_ruta_titulo {
     padding: 30px 0;
 }
-.map_ruta_iframe{
+
+.map_ruta_iframe {
     position: relative;
     padding-top: 56.25%;
 }
-.map_ruta_iframe iframe{
+
+.map_ruta_iframe iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
+
 /* Itinerario */
-.section_itinerario{
+.section_itinerario {
     max-width: 1200px;
     width: 100%;
     margin: auto;
 }
-.section_itinerario .itinirario_title{
+
+.section_itinerario .itinirario_title {
     color: var(--bg-salmon);
 }
-.itinerario_day{
+
+.itinerario_day {
     margin-top: 20px;
     width: 100%;
 }
-.itinerario_day .text_day{
+
+.itinerario_day .text_day {
     text-align: center;
     font-size: 20px;
     width: 15%;
     margin-bottom: 10px;
+    color: var(--color-black);
 }
-.day_horario{
+
+.day_horario {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    color: var(--color-black);
 }
-.day_horario .hora{
+
+.day_horario .hora {
     width: 15%;
     background-color: var(--bg-salmon);
     font-family: var(--font-poppins);
@@ -221,9 +253,339 @@ img{
     color: var(--color-static-white);
     padding: 5px 0;
 }
-.day_horario .descripcion_hora{
+
+.day_horario .descripcion_hora {
     width: 80%;
     padding: 5px 0;
     text-align: left;
     font-size: 18px;
+}
+
+/* Que incluye y que no */
+.what_include {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.include_information {
+    position: relative;
+    padding: 50px 0;
+    background-color: var(--bg-blanco-f3);
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 300px;
+}
+
+.include {
+    width: 250px;
+}
+
+.include h3 {
+    font-family: var(--font-montserrat);
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: var(--color-black);
+}
+
+.include:first-child h3,
+.include:first-child ul li::marker {
+    color: var(--bg-salmon);
+}
+
+.include ul {
+    margin-left: 20px;
+    color: var(--color-black);
+
+}
+
+.include ul li {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.include ul li::marker {
+    font-size: 20px;
+}
+
+.btn_download_infor {
+    display: flex;
+    bottom: -25px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 250px;
+    height: 50px;
+    text-decoration: none;
+    background-color: var(--bg-salmon);
+    color: var(--color-static-white);
+    border-radius: 10px;
+}
+
+/* Condciones */
+.terms_conditions {
+    max-width: 800px;
+    width: 90%;
+    padding: 0 20px;
+    margin: 50px auto 20px auto;
+    color: var(--color-black);
+}
+
+.terms_conditions>ul li {
+    margin-bottom: 5px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.terms_conditions>ul li::marker {
+    color: var(--bg-salmon);
+    font-size: 20px;
+}
+
+/* mas escapes */
+.escapes_recomendados {
+    min-height: 500px;
+    margin-top: 80px;
+}
+
+.ctn_escapes {
+    display: flex;
+    margin-top: 80px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ctn_escapes .escape {
+    width: 450px;
+    margin-bottom: 25px;
+    background-color: var(--bg-blanco-f3);
+}
+
+.escape .escape_img {
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.escape .escape_img img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+.escape .escape_infor {
+    color: var(--color-black);
+    width: 80%;
+    margin: auto;
+}
+
+.escape_infor h3 {
+    font-family: var(--font-montserrat);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.escape_infor p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.escape_end {
+    margin: 25px auto;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.escape_end p {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: var(--font-montserrat);
+    color: var(--bg-salmon);
+}
+
+.escape_end a {
+    width: 145px;
+    height: 50px;
+    background-color: #000;
+    color: var(--color-static-white);
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* Resposive Design */
+
+@media screen and (max-width: 786px) {
+    .text_infomation{
+        width: 75%;
+    }
+    .text_infomation .titulo{
+        font-size: 38px;
+    }
+    .text_infomation .descripcion{
+        font-size: 16px;
+    }
+    .place_item_header{
+        font-size: 24px;
+    }
+    .atractivos__description p{
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .map_ruta_titulo{
+        font-size: 38px;
+    }
+    .day_horario .hora{
+        width: 20%;
+        font-size: 16px;
+    }
+    .day_horario .descripcion_hora{
+        width: 75%;
+        font-size: 16px;
+    }
+    .terms_conditions > ul li{
+        font-size: 16px;
+    }
+    .escapes_recomendados{
+        margin-top: 40px;
+    }
+    .ctn_escapes{
+        margin-top: 40px;
+    }
+    .ctn_escapes .escape{
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .subcontenedor_atractivos{
+        width: 90%;
+    }
+    .sub_atractivo{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .atractivos__image,
+    .atractivos__description{
+        flex: 100%;
+    }
+    .atractivos__image{
+        max-width: 100%;
+        position: relative;
+        padding-top: 56.25%;
+    }
+    .atractivos__image img{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .atractivos__description{
+        padding: 20px;
+    }
+    .atractivos__description h4{
+        margin-bottom: 10px;
+    }
+    .include{
+        margin-bottom: 20px;
+    }
+    .day_horario .hora{
+        width: 25%;
+        font-size: 16px;
+    }
+    .day_horario .descripcion_hora{
+        width: 70%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .text_infomation{
+        width: 80%;
+        background: rgba(0, 0, 0, 0.55);
+    }
+    .text_infomation .titulo{
+        font-size: 34px;
+    }
+    .text_infomation .descripcion{
+        font-size: 14px;
+    }
+    .place_item_header{
+        font-size: 20px;
+    }
+    .place_item_header::after {
+        width: 10px;
+        height: 10px;
+        border-width: 4px 4px 0 0;
+        top: 15px;
+        right: 0.9rem;
+    }
+    .include{
+        margin-bottom: 30px;
+    }  
+    .itinerario_day .text_day{
+        width: 100%;
+    }
+    .day_horario .hora{
+        width: 30%;
+        font-size: 15px;
+    }
+    .day_horario .descripcion_hora{
+        width: 65%;
+        font-size: 15px;
+    }
+    .escape_end p {
+        font-size: 35px;
+    }
+    
+    .escape_end a {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .text_infomation{
+        width: 85%;
+    }
+    .text_infomation .titulo{
+        font-size: 30px;
+    }
+    .text_infomation .descripcion{
+        font-size: 14px;
+    }
+    .place_item_header{
+        font-size: 18px;
+    }
+    .day_horario .hora{
+        width: 40%;
+        font-size: 15px;
+    }
+    .day_horario .descripcion_hora{
+        width: 55%;
+        font-size: 15px;
+    }
+    .escape_infor p{
+        text-align: center;
+    }
+    .escape_end p {
+        font-size: 30px;
+    }
+    
+    .escape_end a {
+        width: 100px;
+    }
 }

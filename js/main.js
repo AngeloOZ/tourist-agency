@@ -80,7 +80,7 @@ function initCarouselTestimonial(){
 
 }
 function loadDarkMode(){
-	console.log("hola mundo");
+	// console.log("hola mundo");
 	const stateDarkMode = (localStorage.getItem("darkMode")) ? 
 		localStorage.getItem("darkMode"): "false";
 		
@@ -138,7 +138,7 @@ function initCollapsed(){
 					placeItem.nextElementSibling.style.maxHeight = "0";
 				})
 				item.classList.add('active');
-				itemBody.style.maxHeight = `${itemBody.scrollHeight + 10}px`;
+				itemBody.style.maxHeight = `${itemBody.scrollHeight}px`;
 			}else{
 				item.classList.remove('active');
 				itemBody.style.maxHeight = "0";
@@ -165,3 +165,7 @@ function filtermove(){
 	})
 }
 
+
+// window.addEventListener("resize", function(e){
+
+// });

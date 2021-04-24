@@ -138,3 +138,14 @@ body.active_pushbar{
     padding: 10px 20px ;
     z-index: 200;
 }
+
+
+/*
+Query
+@media screen and (max-width: 786px) {}
+
+@media screen and (max-width: 635px) {}
+
+@media screen and (max-width: 500px) {}
+
+@media screen and (max-width: 380px) {} */
