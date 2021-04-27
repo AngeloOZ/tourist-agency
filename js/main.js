@@ -167,6 +167,6 @@ function filtermove(){
 }
 
 
-// window.addEventListener("resize", function(e){
-
-// });
+window.addEventListener("resize", function(e){
+	initCollapsed();
+});

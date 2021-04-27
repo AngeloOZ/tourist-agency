@@ -7,7 +7,31 @@ img {
     height: 560px;
     position: relative;
 }
+.select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    appearance:none;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: var(--color-black);
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #6e6e6e;
+    outline: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon  points="0,0 100,0 50,50" style="fill:%236E6E6E" /></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
+}
+.select > option{
+    font-family: var(--font-poppins);
+}
 
+ /* header */
 .text_infomation {
     position: absolute;
     width: 60%;
@@ -335,7 +359,10 @@ img {
     margin: 50px auto 20px auto;
     color: var(--color-black);
 }
-
+.terms_conditions .conditiions_title{
+    color: var(--bg-salmon);
+    margin-bottom: 50px;
+}
 .terms_conditions>ul li {
     margin-bottom: 5px;
     text-align: justify;
@@ -425,9 +452,160 @@ img {
     text-align: center;
     line-height: 50px;
 }
-
+/* Boton de reservacion */
+.booking_tour{
+    --size-btn: 90px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: block;
+    height: var(--size-btn);
+    width: var(--size-btn);
+    border-radius: 50%;
+    background-color: var(--bg-salmon);
+    padding-top: 20px;
+    color: var(--color-static-white);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 100;   
+}
+.booking_tour::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: var(--size-btn);
+    width: var(--size-btn);
+    border-radius: 50%;
+    background-color: var(--bg-salmon);
+    z-index: -1;
+    animation: pulser 1.5s infinite;
+}
+@keyframes pulser {
+    0%{
+        transform: scale(0.95);
+        opacity: 0.9;
+    }
+    100%{
+        transform: scale(1.45);
+        opacity: 0;
+    }
+}
+/* modal de tours */
+.modal_tour_esp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+#solicitar-tour:target{
+    opacity: 1;
+    visibility: visible;
+}
+.btn_close_modal{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    font-size: 30px;
+    color: var(--color-static-white);
+    text-decoration: none;
+}
+.modal_tour_content{
+    background-color: var(--bg-blanco-f3);
+    max-width: 800px;
+    width: 90%;
+    min-height: 300px;
+    padding: 20px 10px;
+    color: var(--color-black);
+}
+.modal_tour_title{
+    font-family: var(--font-questrial);
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+.modal_tour_title strong{
+    color: var(--bg-salmon);
+}
+.modal_tour_form{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.form_modal_tour_input{
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid #6e6e6e;
+    background-color: var(--bg-blanco-f3);
+    font-family: var(--font-poppins);
+    color: var(--color-black);
+}
+.form_modal_tour_input::placeholder,
+.form_modal_tour_textarea::placeholder{
+    font-size: 16px;
+    color: var(--color-black);
+    font-family: var(--font-poppins);
+}
+.form_modal_tour_textarea{
+    font-family: var(--font-poppins);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    height: 40px;
+    outline: none;
+    background-color: var(--bg-blanco-f3);
+    border: 1px solid #6e6e6e;
+}
+.form_modal_tour_select{
+    background-color: var(--bg-blanco-f3);
+    color: var(--color-black);
+    padding-right: 40px;
+}
+.form_modal_tour_submit{
+    grid-column: 1/-1;
+    justify-self: center;
+    height: 50px;
+    max-width: 350px;
+    width: 90%;
+    background-color: black;
+    font-family: var(--font-poppins);
+    font-size: 18px;
+    color: var(--color-static-white);
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.form_modal_tour_submit:focus{
+    border: 2px solid var(--bg-salmon);
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(0.4);
+}
+.form_modal_tour_input:focus,
+.form_modal_tour_textarea:focus,
+.form_modal_tour_select:focus{
+    box-shadow: 0px 0px 2px 2px rgba(248, 86, 93, 0.6);
+    border: none;
+}
 /* Resposive Design */
-
 @media screen and (max-width: 786px) {
     .text_infomation{
         width: 75%;
@@ -511,6 +689,18 @@ img {
         width: 70%;
         font-size: 16px;
     }
+    .modal_tour_form{
+        grid-template-columns: 100%;
+    }
+    .btn_close_modal{
+        top: 10px;
+    }
+    .modal_tour_title{
+        font-size: 25px;
+        margin: 0;
+        padding: 10px 30px;
+        line-height: 35px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -554,6 +744,11 @@ img {
     
     .escape_end a {
         width: 140px;
+    }
+    .modal_tour_title{
+        font-size: 20px;
+        padding: 10px 40px;
+        line-height: 25px;
     }
 }
 

@@ -302,6 +302,7 @@
         </div>
     </section>
     <section class="terms_conditions">
+        <h2 class="subtitle conditiions_title">Condiciones del tour</h2>
         <ul>
             <li>Precio referencial calculado para grupos de 4 personas.</li>
             <li>Esta exploración está diseñada para mínimo cuatro personas y un máximo de ocho personas, para asegurar
@@ -377,7 +378,34 @@
             <p class="footer_copyright">Copyright 2021</p>
         </nav>
     </footer>
-
+    <div class="modal_tour_esp" id="solicitar-tour">
+        <a href="#cerrar" class="btn_close_modal"><i class="fas fa-times"></i></a>
+        <div class="modal_tour_content">
+            <h2 class="modal_tour_title">Estas a punto de reservar <strong>Imbabura Trip</strong></h2>
+            <form action="" class="modal_tour_form">
+                <input type="text" name="" id="" class="form_modal_tour_input" placeholder="Nombre*">
+                <input type="text" name="" id="" class="form_modal_tour_input" placeholder="Apellido*">
+                <input type="email" name="" id="" class="form_modal_tour_input" placeholder="tuemail@dominio.com*">
+                <select name="" id="" class="select form_modal_tour_select">
+                    <option value="" selected disabled>Seleccione su país*</option>
+                    <option value="">Ecuador</option>
+                    <option value="">España</option>
+                </select>
+                <input type="tel" name="" id="" class="form_modal_tour_input" placeholder="+593987654321*">
+                <input type="date" name="" id="" class="form_modal_tour_input">
+                <select name="" id="" class="select form_modal_tour_select">
+                    <option value="" selected disabled>Seleccione que región le gustaria visitar</option>
+                    <option value="">Costa</option>
+                    <option value="">Sierra</option>
+                    <option value="">Oriente</option>
+                    <option value="">Region Insular</option>
+                </select>
+                <textarea name="" id="" class="form_modal_tour_textarea" cols="30" rows="2" placeholder="Mensaje"></textarea>
+                <input type="submit" value="Reservar ahora" class="form_modal_tour_submit">            
+            </form>
+        </div>
+    </div>
+    <a href="#solicitar-tour" class="booking_tour">Solicitar tour</>
     <script src="js/main.js" type="module"></script>
     <script src="js/helpers/no_modules.js" nomodule="true"></script>
 </body>

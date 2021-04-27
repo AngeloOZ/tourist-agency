@@ -186,7 +186,7 @@ img{
   border-radius: 100%;
   transform: translateX(-5px);
   transition: 0.3s ease-in-out transform;
-  z-index: 100;
+  z-index: 9000;
 }
 .btn_dark_mode.active_dark::before{
   transform: translateX(32px);
@@ -211,7 +211,7 @@ img{
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
-  z-index: 9999;
+  z-index: 9000;
   transition: 200ms ease background;
 }
 .nav_header_main.sticky{
@@ -340,7 +340,7 @@ img{
   height: 30px;
   position: relative;
   cursor: pointer;
-  z-index: 9999999;
+  z-index: 9000;
 }
 
 /* Estilos menu hamburguesa */
