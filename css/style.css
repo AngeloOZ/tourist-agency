@@ -701,12 +701,12 @@ img{
   width: 260px;
   text-align: center;
 }
-.card_package_description .precio{
+.card_package_description .package_precio{
   font-size: 27px;
   font-family: var(--font-montserrat);
   font-weight: bold;
 }
-.card_package_description .precio::before{
+.card_package_description .package_precio::before{
   content: '$';
 }
 .cont_btn_package{

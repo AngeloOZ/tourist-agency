@@ -689,17 +689,30 @@ img {
         width: 70%;
         font-size: 16px;
     }
+    .modal_tour_content{
+        height: calc(100vh - 20px);
+        overflow-y: scroll;
+        padding: 10px;
+    }
     .modal_tour_form{
         grid-template-columns: 100%;
+        grid-gap: 10px;
     }
     .btn_close_modal{
         top: 10px;
+        right: 50px;
+        color: var(--color-black);
     }
     .modal_tour_title{
         font-size: 25px;
         margin: 0;
         padding: 10px 30px;
         line-height: 35px;
+    }
+    .form_modal_tour_submit{
+        margin-top: 10px;
+        height: 50px;
+        font-size: 17px;
     }
 }
 
