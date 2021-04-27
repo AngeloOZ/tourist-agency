@@ -51,6 +51,7 @@ function initEvents(){
 
 }
 
+
 function initCarouselTestimonial(){
 	const testCont = document.getElementById('sub_cont_test');
 	const contIndicadores = document.getElementById('indicadores_test');
@@ -80,7 +81,7 @@ function initCarouselTestimonial(){
 
 }
 function loadDarkMode(){
-	// console.log("hola mundo");
+	console.log("hola mundo");
 	const stateDarkMode = (localStorage.getItem("darkMode")) ? 
 		localStorage.getItem("darkMode"): "false";
 		
@@ -119,6 +120,7 @@ function initParallax(){
 function initCollapsed(){
 	const ctnInformationPlaces = document.getElementById('information_places');
 	const placeItemsHeader = document.querySelectorAll(".place_item_header");
+	// --> si ctnInformationPlaces es undefined
 	if(!ctnInformationPlaces){ 
 		return;
 	}
@@ -127,10 +129,9 @@ function initCollapsed(){
 	firstElement.classList.add('active');
 	let itemBody = firstElement.nextElementSibling;
 	itemBody.style.maxHeight = itemBody.scrollHeight+"px"
-
 	ctnInformationPlaces.addEventListener('click',e =>{
-		if(e.target.classList.contains('place_item_header')){
-			const item = e.target;
+		if(e.target.parentElement.classList.contains('place_item_header')){
+			const item = e.target.parentElement;
 			itemBody = item.nextElementSibling;
 			if(!item.classList.contains('active')){
 				placeItemsHeader.forEach(placeItem =>{
@@ -138,15 +139,12 @@ function initCollapsed(){
 					placeItem.nextElementSibling.style.maxHeight = "0";
 				})
 				item.classList.add('active');
-				itemBody.style.maxHeight = `${itemBody.scrollHeight}px`;
+				itemBody.style.maxHeight = `${itemBody.scrollHeight + 10}px`;
 			}else{
 				item.classList.remove('active');
 				itemBody.style.maxHeight = "0";
 			}
-			setTimeout(() => {
-				const height = item.offsetTop - 180;
-				window.scrollTo(0,height);
-			}, 200);
+
 		}
 	})
 }
@@ -159,7 +157,7 @@ function filtermove(){
 		return;
 	}
 	btnfilter.addEventListener("click",()=>{
-	contfilter.classList.add("active");
+	contfilter.classList.toggle("active");
 	})
 	btnfilterclose.addEventListener("click",()=>{
 		contfilter.classList.remove("active");

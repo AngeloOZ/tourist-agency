@@ -8,7 +8,7 @@
 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!-- font material icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- favicon -->
@@ -17,14 +17,43 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Aventurate y vive tours</title>
 </head>
+
 <body>
 
     <!-- fillter menu -->
-    <button  class="filter-button" id="filter-button">filtrar</button>
-
+    <button class="filter-button" id="filter-button"> 
+        <i class="fas fa-sort-amount-down"></i>
+        FILTRAR</button>
     <aside class="filter-bar" id="filter-bar">
-        <h1>Filtrado</h1>
-        <button class="filter-bar-close" id="filter-bar-close"> cerrar</button>
+        <div class="encabezado">
+            <p class="filter-titulo">FILTRADO</p>
+            <button class="filter-bar-close" id="filter-bar-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="provincias">
+            <p class="filter-subtìtulo">Provincias </p>
+           <div class="provs">
+            <label><input type="checkbox" class="cbox" id="cbox" value="first_checkbox">Guayas</label>
+            <label><input type="checkbox" class="cbox" id="cbox2" value="first_checkbox">Cotopaxi</label>
+            <label><input type="checkbox" class="cbox" id="cbox3" value="first_checkbox">Tungurahia</label>
+            <label><input type="checkbox" class="cbox" id="cbox4" value="first_checkbox">Morona Santiago</label>
+            <label><input type="checkbox" class="cbox" id="cbox5" value="first_checkbox">Santo Domingo</label>
+            <label><input type="checkbox" class="cbox" id="cbox6" value="first_checkbox">Cumanda</label>
+            <label><input type="checkbox" class="cbox" id="cbox7" value="first_checkbox">Caaribe</label>
+           </div>
+        </div>
+        <div class="precio">
+            <p class="filter-subtìtulo">Precio</p>
+        </div>
+        <div class="ordenarpor">
+            <p class="filter-subtìtulo">Ordenar por</p>
+         <div class="rbtns">
+            <label><input type="radio" class="rbtn" id="rbtn1" value="first_checkbox">Populares</label>
+            <label><input type="radio" class="rbtn" id="rbtn1" value="first_checkbox">Recientes</label>
+         </div>
+        </div>
+        <button>BUSCARr</button>
     </aside>
     <header class="header">
         <!-- section menu contact -->
@@ -78,78 +107,86 @@
         </ul>
     </nav>
 
-<!-- First Section  -->
+    <!-- First Section  -->
     <section class="section_one">
         <article class="inicio">
-            <h1 class= "inicio_tittle">Nuestros <br> <strong>Tours</strong></h1>
-            <p>cultura y los destinos vibrantes de Argentina en una visita guiada con los especialistas en viajes más experimentados.</p>
+            <h1 class="inicio_tittle">Nuestros <br> <strong>Tours</strong></h1>
+            <p>cultura y los destinos vibrantes de Argentina en una visita guiada con los especialistas en viajes más
+                experimentados.</p>
         </article>
         <div class="img">
             <img src="image/tours.png" alt="">
         </div>
     </section>
 
-<!-- Tours section -->
-<section class="section_tours">
-    <div class="tours_container">
-        <div class="trip_card">
-            <div class="trip_card_img">
-                <img src="image/tours_1.png" alt="">
+    <!-- Tours section -->
+    <section class="section_tours">
+        <div class="tours_container">
+            <div class="trip_card">
+                <div class="trip_card_img">
+                    <img src="image/tours_1.png" alt="">
+                </div>
+                <div class="trip_card_info">
+                    <h2>Trip Imbabura</h2>
+                    <p> iam arcu, in phasellus ullamcorper. Tempus, fames nisl semper sem sit arcu. In pretium volutpat
+                        vitae lacus, libero. Quis ornare tortor magna habitant a. </p>
+                    <p class="dollar">$45</p>
+                    <div class="trip_card_end">
+                        <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
+                        <a href="">Ver mas</a>
+                    </div>
+                </div>
             </div>
-            <div class="trip_card_info">
-                <h2>Trip Imbabura</h2>
-                <p>  iam arcu, in phasellus ullamcorper. Tempus, fames nisl semper sem sit arcu. In pretium volutpat vitae lacus, libero. Quis ornare tortor magna habitant a. </p>
-                <p class="dollar">$45</p>
-                <div class="trip_card_end">
-                    <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
-                    <a href="">Ver mas</a>
+            <div class="trip_card">
+                <div class="trip_card_img">
+                    <img src="image/tours_2.png" alt="">
+                </div>
+                <div class="trip_card_info">
+                    <h2>Trip Imbabura</h2>
+                    <p> Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la provincia de
+                        los lagos, por su cultura y artesanías ideal para un turismo de aventura y contacto con la
+                        naturaleza y sus artesanías.</p>
+                    <p class="dollar">$45</p>
+                    <div class="trip_card_end">
+                        <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
+                        <a href="">Ver mas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="trip_card">
+                <div class="trip_card_img">
+                    <img src="image/tours_3.png" alt="">
+                </div>
+                <div class="trip_card_info">
+                    <h2>Trip Imbabura</h2>
+                    <p> Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la provincia de
+                        los lagos, por su cultura y artesanías ideal para un turismo de aventura y contacto con la
+                        naturaleza y sus artesanías.</p>
+                    <p class="dollar">$45</p>
+                    <div class="trip_card_end">
+                        <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
+                        <a href="">Ver mas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="trip_card">
+                <div class="trip_card_img">
+                    <img src="image/tours_4.png" alt="">
+                </div>
+                <div class="trip_card_info">
+                    <h2>Trip Imbabura</h2>
+                    <p> Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la provincia de
+                        los lagos, por su cultura y artesanías ideal para un turismo de aventura y contacto con la
+                        naturaleza y sus artesanías.</p>
+                    <p class="dollar">$45</p>
+                    <div class="trip_card_end">
+                        <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
+                        <a href="">Ver mas</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="trip_card">
-            <div class="trip_card_img">
-                <img src="image/tours_2.png" alt="">
-            </div>
-            <div class="trip_card_info">
-                <h2>Trip Imbabura</h2>
-                <p>  Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la provincia de los lagos, por su cultura y artesanías ideal para un turismo de aventura y contacto con la naturaleza y sus artesanías.</p>
-                <p class="dollar">$45</p>
-                <div class="trip_card_end">
-                    <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
-                    <a href="">Ver mas</a>
-                </div>
-            </div>
-        </div>
-        <div class="trip_card">
-            <div class="trip_card_img">
-                <img src="image/tours_3.png" alt="">
-            </div>
-            <div class="trip_card_info">
-                <h2>Trip Imbabura</h2>
-                <p>  Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la provincia de los lagos, por su cultura y artesanías ideal para un turismo de aventura y contacto con la naturaleza y sus artesanías.</p>
-                <p class="dollar">$45</p>
-                <div class="trip_card_end">
-                    <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
-                    <a href="">Ver mas</a>
-                </div>
-            </div>
-        </div>
-        <div class="trip_card">
-            <div class="trip_card_img">
-                <img src="image/tours_4.png" alt="">
-            </div>
-            <div class="trip_card_info">
-                <h2>Trip Imbabura</h2>
-                <p>  Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la provincia de los lagos, por su cultura y artesanías ideal para un turismo de aventura y contacto con la naturaleza y sus artesanías.</p>
-                <p class="dollar">$45</p>
-                <div class="trip_card_end">
-                    <p><i class="far fa-clock"></i> 23 dias y 5 noches</p>
-                    <a href="">Ver mas</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     <footer class="footer">

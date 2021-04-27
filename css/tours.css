@@ -113,22 +113,28 @@
 .trip_card:nth-child(even) a{
     transform: rotateY(180deg);
 }
+
+/* Filter bar aside */
 .filter-bar{
-    width: 300px;
+    width: 400px;
     height: 100%;
     position: fixed;
     top: 0;
     right: -100%;
-    background: royalblue;
+    background: rgb(255, 255, 255);
     z-index: 99900;
     transition: 1.5s ease-in-out right;
 }
 .filter-button{
     position: fixed;
     left: 0;
-    top: 300px;
+    top: 85%;
+    height: 60px;
     border: none;
+    cursor: pointer;
     background-color: black;
+    font-family: var(--font-poppins);
+    font-size: 160x;
     color: blanchedalmond;
     padding: 10px 20px ;
     z-index: 100;
@@ -137,12 +143,52 @@
 .filter-bar.active{
     right: 0;
 }
-/*
-Query
-@media screen and (max-width: 786px) {}
 
-@media screen and (max-width: 635px) {}
+.encabezado{
+    display: flex;
+    width: 100%;
+    height: 55px;
+    background-color: var(--bg-salmon) ;
+    color: white;
+}
 
-@media screen and (max-width: 500px) {}
+.encabezado .filter-titulo{
+    width: 85%;
+    text-align: center;
+    align-items: center;
+    line-height: 55px;
+    font-weight: bold;
+}
+.encabezado .filter-bar-close{
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    width: 15%;
+    font-size: 20px;
+    background-color: #E55057;
+}
 
-@media screen and (max-width: 380px) {} */
+.filter-subtìtulo{
+    width: 100%;
+    height: 55px;
+    background-color: var(--bg-blanco-f3) ;
+    font-family: var(--font-montserrat);
+    font-weight:bolder;
+    text-align:left;
+    line-height: 55PX;
+    padding-left: 5%;
+}
+
+
+.provincias .provs, .ordenarpor .rbtns{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1em;
+
+}
+.precio, .ordenarpor{
+    width: 100%;
+    height: 150px;
+}
