@@ -21,7 +21,7 @@
 <body>
 
     <!-- fillter menu -->
-    <button class="filter-button" id="filter-button"> 
+    <button class="filter-button" id="filter-button">
         <i class="fas fa-sort-amount-down"></i>
         FILTRAR</button>
     <aside class="filter-bar" id="filter-bar">
@@ -33,27 +33,47 @@
         </div>
         <div class="provincias">
             <p class="filter-subtìtulo">Provincias </p>
-           <div class="provs">
-            <label><input type="checkbox" class="cbox" id="cbox" value="first_checkbox">Guayas</label>
-            <label><input type="checkbox" class="cbox" id="cbox2" value="first_checkbox">Cotopaxi</label>
-            <label><input type="checkbox" class="cbox" id="cbox3" value="first_checkbox">Tungurahia</label>
-            <label><input type="checkbox" class="cbox" id="cbox4" value="first_checkbox">Morona Santiago</label>
-            <label><input type="checkbox" class="cbox" id="cbox5" value="first_checkbox">Santo Domingo</label>
-            <label><input type="checkbox" class="cbox" id="cbox6" value="first_checkbox">Cumanda</label>
-            <label><input type="checkbox" class="cbox" id="cbox7" value="first_checkbox">Caaribe</label>
-           </div>
+            <div class="provs">
+                <label><input type="checkbox" class="cbox" id="cbox" value="first_checkbox">Guayas</label>
+                <label><input type="checkbox" class="cbox" id="cbox2" value="first_checkbox">Cotopaxi</label>
+                <label><input type="checkbox" class="cbox" id="cbox3" value="first_checkbox">Tungurahia</label>
+                <label><input type="checkbox" class="cbox" id="cbox4" value="first_checkbox">Morona Santiago</label>
+                <label><input type="checkbox" class="cbox" id="cbox5" value="first_checkbox">Santo Domingo</label>
+                <label><input type="checkbox" class="cbox" id="cbox6" value="first_checkbox">Cumanda</label>
+                <label><input type="checkbox" class="cbox" id="cbox7" value="first_checkbox">Caaribe</label>
+            </div>
         </div>
         <div class="precio">
             <p class="filter-subtìtulo">Precio</p>
+            <!-- price range sliderº -->
+            <div class="precio-container">
+                <div class="range-price">
+                    <p>
+                    <p id="star">0</p>dìas a <p id="end">0</p>dìas </p>
+                </div>
+                <div class="middle">
+                    <div class="multi-range-slider">
+                        <input type="range" id="input-left" min="0" max="100" value="25">
+                        <input type="range" id="input-right" min="0" max="100" value="75">
+
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="ordenarpor">
             <p class="filter-subtìtulo">Ordenar por</p>
-         <div class="rbtns">
-            <label><input type="radio" class="rbtn" id="rbtn1" value="first_checkbox">Populares</label>
-            <label><input type="radio" class="rbtn" id="rbtn1" value="first_checkbox">Recientes</label>
-         </div>
+            <div class="rbtns">
+                <label><input type="radio" class="rbtn" name="rbtn" id="rbtn1" value="first_checkbox">Populares</label>
+                <label><input type="radio" class="rbtn" name="rbtn" id="rbtn2" value="first_checkbox">Recientes</label>
+            </div>
         </div>
-        <button>BUSCARr</button>
+        <button class="btn_buscar">BUSCAR</button>
     </aside>
     <header class="header">
         <!-- section menu contact -->
