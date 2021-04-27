@@ -377,7 +377,7 @@ img {
 /* mas escapes */
 .escapes_recomendados {
     min-height: 500px;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .ctn_escapes {
@@ -454,23 +454,48 @@ img {
 }
 /* Boton de reservacion */
 .booking_tour{
-    --size-btn: 90px;
+    --size-btn: 80px;
     position: fixed;
     right: 20px;
     bottom: 20px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: var(--size-btn);
     width: var(--size-btn);
     border-radius: 50%;
     background-color: var(--bg-salmon);
-    padding-top: 20px;
     color: var(--color-static-white);
     font-weight: 600;
     font-family: var(--font-poppins);
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    z-index: 100;   
+    z-index: 10000;   
+}
+.booking_tour_text{
+    display: inline-block;
+    position: absolute;
+    background-color: var(--bg-salmon);
+    color: var(--color-static-white);
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+    width: 180px;
+    padding: 5px 0;
+    left: -170px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: 0.3s ease-in transform;
+}
+.booking_tour:hover .booking_tour_text{
+    transform: scale(1);
+}
+.booking_tour img{
+    width: 50%;
+    height: 50%;
 }
 .booking_tour::before{
     content: '';
@@ -495,6 +520,28 @@ img {
         opacity: 0;
     }
 }
+
+.btn_booking_tour{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-salmon);
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--color-static-white);
+    font-size: 18px;
+}
+.btn_booking_tour i{
+    margin-left: 10px;
+    font-size: 22px;
+}
+.btn_speciall_hover:hover{
+    background-color: crimson;
+}
 /* modal de tours */
 .modal_tour_esp{
     position: fixed;
@@ -505,7 +552,7 @@ img {
     display: grid;
     place-items: center;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 10000;
+    z-index: 11000;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in;
@@ -805,4 +852,13 @@ img {
     .btn_close_modal{
         top: 20px;
     }
+    .booking_tour{
+        --size-btn: 70px
+    }
+    .booking_tour_text{
+        font-size: 14px;
+        width: 150px;
+        left: -140px;
+    }
+    
 }

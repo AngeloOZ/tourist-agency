@@ -21,7 +21,6 @@ function initEvents(){
 			btnHamburger.classList.toggle('active');
 		}else{
 			btnHamburger.classList.toggle('active');
-			document.querySelector('body').style.transform = "translateX(0)";
 		}
 		const menu = document.getElementById('nav_enlaces');
 		menu.classList.toggle('active')

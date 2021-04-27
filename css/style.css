@@ -50,6 +50,10 @@ h1.title_special{
 img{
   max-width: 100%;
 }
+a{
+  text-decoration: none;
+  color: unset;
+}
 /* Helpers */
 
 .subtitle{
