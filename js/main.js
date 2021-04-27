@@ -165,11 +165,9 @@ function filtermove(){
 }
 
 
-<<<<<<< Updated upstream
 window.addEventListener("resize", function(e){
 	initCollapsed();
 });
-=======
 // price range bar
 
 var inputLeft = document.getElementById("input-left");
@@ -235,4 +233,3 @@ inputRight.addEventListener("mousedown", function() {
 inputRight.addEventListener("mouseup", function() {
 	thumbRight.classList.remove("active");
 });
->>>>>>> Stashed changes
