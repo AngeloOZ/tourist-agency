@@ -802,4 +802,7 @@ img {
         overflow-y: scroll;
         padding: 10px;
     }
+    .btn_close_modal{
+        top: 20px;
+    }
 }
