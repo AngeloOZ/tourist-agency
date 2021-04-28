@@ -80,7 +80,6 @@ function initCarouselTestimonial(){
 
 }
 function loadDarkMode(){
-	console.log("hola mundo");
 	const stateDarkMode = (localStorage.getItem("darkMode")) ? 
 		localStorage.getItem("darkMode"): "false";
 		
@@ -129,8 +128,8 @@ function initCollapsed(){
 	let itemBody = firstElement.nextElementSibling;
 	itemBody.style.maxHeight = itemBody.scrollHeight+"px"
 	ctnInformationPlaces.addEventListener('click',e =>{
-		if(e.target.parentElement.classList.contains('place_item_header')){
-			const item = e.target.parentElement;
+		if(e.target.classList.contains('place_item_header')){
+			const item = e.target;
 			itemBody = item.nextElementSibling;
 			if(!item.classList.contains('active')){
 				placeItemsHeader.forEach(placeItem =>{
@@ -138,12 +137,15 @@ function initCollapsed(){
 					placeItem.nextElementSibling.style.maxHeight = "0";
 				})
 				item.classList.add('active');
-				itemBody.style.maxHeight = `${itemBody.scrollHeight + 10}px`;
+				itemBody.style.maxHeight = `${itemBody.scrollHeight}px`;
+				setTimeout(() => {
+					const hgt = item.offsetTop - 180;
+					window.scrollTo(0, hgt)
+				}, 250);
 			}else{
 				item.classList.remove('active');
 				itemBody.style.maxHeight = "0";
 			}
-
 		}
 	})
 }
