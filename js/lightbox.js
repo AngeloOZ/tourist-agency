@@ -5,11 +5,12 @@ export default class LightBox{
     descripcionLightBox
 
     constructor(array = null){
-        if(array == null) throw new Error('array inicial no válido');
+        if(array === null || array.length === 0) throw new Error('array inicial no válido o está vacío');
         this.arrayImage = [...array];
     }
     init(){
         let contenedorLight = document.getElementById('container_lightboox')
+        console.log(this.arrayImage.length);
         if(!contenedorLight){
             contenedorLight = document.createElement('DIV');
             contenedorLight.id = 'container_lightboox';

@@ -4,14 +4,6 @@ const navMain = document.getElementById('nav_header_main');
 const btnDark = document.getElementById('btn_dark_mode');
 const btnHamburger  = document.getElementById('btn_hamburger');
 
-try {
-	const images = document.querySelectorAll('img.lightbox');
-	const light = new LightBox(images);
-	light.init();
-} catch (error) {
-	console.log(error);
-}
-
 loadDarkMode();
 initEvents();
 
@@ -43,11 +35,15 @@ function initEvents(){
 	
 	document.addEventListener('DOMContentLoaded', _ =>{
 		initCarouselTestimonial();
+		initLightBox();
 		initParallax();	
 		initCollapsed();
 		filtermove();
 	})
 
+	window.addEventListener("resize", function(e){
+		initCollapsed();
+	});
 }
 
 
@@ -149,7 +145,6 @@ function initCollapsed(){
 		}
 	})
 }
-
 function filtermove(){
 	let btnfilter = document.getElementById("filter-button");
 	let btnfilterclose = document.getElementById("filter-bar-close");
@@ -164,8 +159,13 @@ function filtermove(){
 		contfilter.classList.remove("active");
 	})
 }
+function initLightBox(){
+	try {
+		const images = document.querySelectorAll('img.lightbox');
+		const light = new LightBox(images);
+		light.init();
+	} catch (error) {
+		console.log(error);
+	}
+}
 
-
-window.addEventListener("resize", function(e){
-	initCollapsed();
-});

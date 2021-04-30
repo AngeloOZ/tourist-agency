@@ -540,7 +540,7 @@ img {
     font-size: 22px;
 }
 .btn_speciall_hover:hover{
-    background-color: crimson;
+    background-color: #ff3943;
 }
 /* modal de tours */
 .modal_tour_esp{
