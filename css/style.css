@@ -5,6 +5,7 @@
 @import "tours.css";
 @import "tour_especifico.css";
 @import "contactos.css";
+@import "galeria.css";
 
 :root{
   /* Variables de Fonts */
