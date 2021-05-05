@@ -73,6 +73,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding: 50px;
+  color: var(--color-black);
 }
 .trip_card_info .dollar {
   font-family: var(--font-montserrat);
@@ -86,7 +87,7 @@
   align-items: center;
 }
 .trip_card_info .trip_card_end P {
-  color: var(--bg-negro-2F);
+  color: var(#bbc1e1);
 }
 .trip_card_info .trip_card_end a ,.btn_buscar{
   width: 145px;
